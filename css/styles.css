@@ -153,6 +153,9 @@ h1 {
     text-transform: uppercase;
 }
 .hero-button {
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-delay: 0s, 1s;
     background-color: var(--accent-color);
     color: var(--secondary-text-color);
 
