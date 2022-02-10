@@ -57,6 +57,13 @@ body {
 }
 
 /* Header links  */
+.header-container {
+    justify-content: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 1px solid #ececec;
+}
 .nav,
 .nav-list,
 .contact-list {
@@ -69,7 +76,7 @@ body {
     margin-left: 90px;
 }
 .contact-list {
-    margin-left: auto;
+    margin-left: 331px;
     padding: 0;
 }
 .contact-item + .contact-item {
@@ -404,6 +411,7 @@ h1 {
 .projects-list-item {
     display: flex;
     margin-bottom: 30px;
+    border-bottom: 1px solid #ececec;
 }
 .projects-list img {
     display: block;
