@@ -327,14 +327,8 @@ body {
 .address-list {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    margin: 0;
 }
 
-.address-item {
-    margin: 0;
-    padding: 0;
-}
 .address-item + .address-item {
     margin-top: 9px;
 }
