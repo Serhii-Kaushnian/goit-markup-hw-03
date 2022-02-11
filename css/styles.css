@@ -11,11 +11,26 @@
 }
 /* ======Reset=============== */
 
-h1 {
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+p {
     margin: 0;
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* ======Reset=============== */
 body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
@@ -29,14 +44,16 @@ body {
 /* Container */
 
 .container {
-    display: flex;
-    align-items: center;
     width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
 
     /* outline: 2px solid red;
-    background-color: coral; */
+    background-color: rgba(99, 76, 67, 0.449); */
+}
+
+.section {
+    padding-bottom: 94px;
 }
 
 /* Styles for main page */
@@ -66,12 +83,12 @@ body {
 }
 
 /* Header links  */
-.header-container {
-    justify-content: center;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+.header {
     border-bottom: 1px solid #ececec;
+}
+.header-container {
+    display: flex;
+    justify-content: center;
 }
 
 .nav,
@@ -82,23 +99,15 @@ body {
 }
 
 .nav-list {
-    padding: 0;
-    margin: 0;
     margin-left: 90px;
 }
 
 .contact-list {
-    margin-left: 331px;
-    padding: 0;
+    margin-left: auto;
 }
 
 .contact-item + .contact-item {
-    padding-left: 50px;
-}
-
-.nav-item {
-    display: flex;
-    align-items: center;
+    margin-left: 50px;
 }
 
 .nav-item a {
@@ -108,7 +117,7 @@ body {
 }
 
 .nav-item + .nav-item {
-    padding-left: 50px;
+    margin-left: 50px;
 }
 
 .nav-link:hover,
@@ -199,19 +208,19 @@ body {
 }
 
 /* Advantages section  */
-
+.advantages.section {
+    padding-top: 94px;
+}
 .advantages-list {
     display: flex;
-    padding: 0;
-    margin: 0;
-    margin-top: 94px;
 }
 
 .advantages-item + .advantages-item {
-    padding-left: 30px;
+    margin-left: 30px;
 }
 
 .advantages-item-title {
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -223,18 +232,7 @@ body {
 
 /* Ocupation section  */
 
-.ocupation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .ocupation-title {
-    display: flex;
-    margin: 0 auto;
-    margin-top: 94px;
-
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -246,43 +244,21 @@ body {
 
 .ocupation-list {
     display: flex;
-    margin: 0;
     margin-top: 50px;
-    padding: 0;
-    padding-bottom: 94px;
-    justify-content: space-between;
-}
-
-.ocupation-item-title {
-    display: flex;
 }
 
 .ocupation-item-title + .ocupation-item-title {
-    padding-left: 30px;
+    margin-left: 30px;
 }
 
 /* Team section */
 
 .team {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.team-container {
-    justify-content: center;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-
     background-color: var(--secondary-bg-color);
 }
 
 .team-title {
-    display: flex;
-    margin: 0 auto;
-    margin-top: 94px;
+    padding-top: 94px;
 
     color: var(--title-text-color);
 
@@ -295,25 +271,17 @@ body {
 
 .team-list {
     display: flex;
-    margin: 0;
     margin-top: 50px;
-    padding: 0;
-    margin-bottom: 94px;
-    justify-content: space-between;
-}
-
-.team-list img {
-    display: block;
 }
 
 .team-item {
-    display: flex;
-    flex-direction: column;
-
     background-color: #fff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+}
+.team-item-text-container {
+    padding: 30px 0;
 }
 
 .team-item + .team-item {
@@ -321,9 +289,6 @@ body {
 }
 
 .team-item-title {
-    margin: 0;
-    margin-top: 30px;
-
     color: var(--title-text-color);
 
     font-weight: 500;
@@ -335,7 +300,6 @@ body {
 
 .team-item-text {
     margin-top: 10px;
-    margin-bottom: 30px;
 
     font-size: 16px;
     line-height: 1.19;
@@ -345,21 +309,9 @@ body {
 
 /* Footer  */
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.footer .logo {
-    padding-top: 60px;
-    padding-left: 0;
-    margin-right: auto;
-}
-
 .footer {
     background-color: var(--footer-bg-color);
+    padding: 60px 0;
 }
 
 .footer-logo {
@@ -370,7 +322,6 @@ body {
 
 .address {
     margin-top: 20px;
-    margin-bottom: 60px;
 }
 
 .address-list {
@@ -385,7 +336,7 @@ body {
     padding: 0;
 }
 .address-item + .address-item {
-    padding-top: 4.5px;
+    margin-top: 9px;
 }
 
 .address a {
@@ -400,30 +351,24 @@ body {
 }
 
 /* ====Styles for Portfolio page=================================================== */
-
-.projects {
-    display: flex;
-    flex-direction: column;
+.projects.section {
+    padding-top: 94px;
 }
-
 /* ======Filter list======= */
 
 .filter-list-item + .filter-list-item {
-    padding-left: 8px;
+    margin-left: 8px;
 }
 
 .filter-list {
     display: flex;
     justify-content: center;
-    margin: 0;
-    margin-top: 94px;
-    padding: 0;
 }
 
 .filter-button {
     margin: 0 auto;
     border-radius: 4px;
-    padding: 10px 32px;
+    padding: 6px 22px;
     border: transparent;
 
     background-color: var(--secondary-bg-color);
@@ -454,42 +399,35 @@ body {
 .projects-list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    margin-top: 50px;
-    margin-bottom: 94px;
-    justify-content: space-between;
+    margin-top: 65px;
+    margin-right: -15px;
+    margin-bottom: -15px;
+    margin-left: -15px;
 }
 
 .projects-list-item {
-    display: flex;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ececec;
+    margin: 15px;
 }
-
-.projects-list img {
-    display: block;
+.projects-title-text-container {
+    padding: 20px 24px;
+    border-bottom: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
 }
 
 .projects-list-title {
-    margin: 0;
-    margin-top: 20px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    padding-left: 24px;
 }
 
 .projects-list-text {
-    margin-top: 4px;
-    margin-bottom: 20px;
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.03em;
-    padding-left: 24px;
 }
 
 .projects-list a {
