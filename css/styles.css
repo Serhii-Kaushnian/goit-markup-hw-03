@@ -54,6 +54,22 @@ body {
 
 .section {
     padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+/* ===========Visualy hidden titles=============== */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* Styles for main page */
@@ -208,9 +224,7 @@ body {
 }
 
 /* Advantages section  */
-.advantages.section {
-    padding-top: 94px;
-}
+
 .advantages-list {
     display: flex;
 }
@@ -231,6 +245,9 @@ body {
 }
 
 /* Ocupation section  */
+.ocupation {
+    padding-top: 0;
+}
 
 .ocupation-title {
     font-weight: 700;
@@ -258,8 +275,6 @@ body {
 }
 
 .team-title {
-    padding-top: 94px;
-
     color: var(--title-text-color);
 
     font-weight: 700;
@@ -345,9 +360,7 @@ body {
 }
 
 /* ====Styles for Portfolio page=================================================== */
-.projects.section {
-    padding-top: 94px;
-}
+
 /* ======Filter list======= */
 
 .filter-list-item + .filter-list-item {
@@ -355,6 +368,7 @@ body {
 }
 
 .filter-list {
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
@@ -397,7 +411,7 @@ body {
 .projects-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 65px;
+    margin-top: -15px;
     margin-right: -15px;
     margin-bottom: -15px;
     margin-left: -15px;
